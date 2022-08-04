@@ -85,7 +85,7 @@ end
 function pkgconfig.load(name, extrapaths)
   local pc = pkgconfig.readpc(name, extrapaths)
   if pc then
-    return table.tostring(pkgconfig.parse(pc))
+    return pkgconfig.parse(pc)
   end
 end
 
